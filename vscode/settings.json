@@ -1,0 +1,22 @@
+{
+     // Controls the font family.
+    "extensions.ignoreRecommendations": true,
+    //"editor.fontFamily": "'Courier New', monospace",
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontSize": 12,
+    "editor.wordWrap": "on",
+    "window.zoomLevel": -1,
+    "python.linting.enabledWithoutWorkspace": false,
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
+    "window.zoomLevel": 0,
+    "terminal.integrated.fontSize": 11,
+    "editor.minimap.enabled": false,
+    "files.exclude": {
+        "**/.*": true,
+        "**/*.pyc": true,
+        "build": true
+    },
+    "window.menuBarVisibility": "default",
+    "workbench.activityBar.visible": true,
+    "workbench.startupEditor": "newUntitledFile"
+}
