@@ -2,7 +2,7 @@ syntax on
 set hlsearch
 set mousehide
 set number
-set tabstop=4
+set tabstop=4 shiftwidth=4 expandtab
 set si 
 set shiftwidth=4
 "set statusline+=%F

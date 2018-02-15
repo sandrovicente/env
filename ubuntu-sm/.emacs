@@ -83,7 +83,7 @@
 ;; '(default ((t (:inherit nil :stipple nil :background "black" :foreground "wheat" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "bitstream" :family "Courier 10 Pitch"))))
  )
 (tool-bar-mode -1)
-
+(global-auto-revert-mode t) ;; keep buffers up-to-date
 
 ;(require 'package)
 ;(setq package-enable-at-startup nil)
@@ -112,3 +112,6 @@
 (global-set-key (kbd "C-x <down>") 'windmove-down)
 (global-set-key (kbd "C-x <left>") 'windmove-left)
 (global-set-key (kbd "C-x <right>") 'windmove-right)
+
+(global-set-key (kbd "C-x <prior>") 'previous-buffer)
+(global-set-key (kbd "C-x <next>") 'next-buffer)
