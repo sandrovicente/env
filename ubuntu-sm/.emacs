@@ -19,7 +19,7 @@
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (wheatgrass)))
  '(font-use-system-font t)
- '(package-selected-packages (quote (use-package magit)))
+ '(package-selected-packages (quote (ido-better-flex use-package magit)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(tool-bar-mode nil))
@@ -80,7 +80,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-;; '(default ((t (:inherit nil :stipple nil :background "black" :foreground "wheat" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 105 :width normal :foundry "bitstream" :family "Courier 10 Pitch"))))
  )
 (tool-bar-mode -1)
 (global-auto-revert-mode t) ;; keep buffers up-to-date
@@ -115,3 +114,16 @@
 
 (global-set-key (kbd "C-x <prior>") 'previous-buffer)
 (global-set-key (kbd "C-x <next>") 'next-buffer)
+
+;; Display ido results vertically, rather than horizontally
+(setq ido-decorations (quote ("\n-> " "" "\n   " "\n   ..." "[" "]" " [No match]" " [Matched]" " [Not readable]" " [Too big]" " [Confirm]")))
+
+(defun ido-disable-line-truncation () (set (make-local-variable 'truncate-lines) nil))
+(add-hook 'ido-minibuffer-setup-hook 'ido-disable-line-truncation)
+(defun ido-define-keys () ;; C-n/p is more intuitive in vertical layout
+    (define-key ido-completion-map (kbd "C-n") 'ido-next-match)
+    (define-key ido-completion-map (kbd "C-p") 'ido-prev-match))
+(add-hook 'ido-setup-hook 'ido-define-keys)
+
+(require 'ido)
+(ido-mode t)

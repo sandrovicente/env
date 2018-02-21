@@ -6,8 +6,20 @@ set tabstop=4 shiftwidth=4 expandtab
 set si 
 set shiftwidth=4
 "set statusline+=%F
-colorscheme darkblue 
+colorscheme desert 
 set autoread
+set autoindent
 set guifont=Monospace\ 9
-set statusline=%F%m%r%h%w\ [%{&ff}\ %Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+"set statusline=%F%m%r%h%w\ [%{&ff}\ %Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
+set mouse=a
+set hidden
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+nnoremap <C-@> :CtrlPBuffer<CR>
+"nnoremap <Leader>vv :vimgrep <cword> ./**/* <CR>:cw<CR>
+
+set runtimepath^=~/.vim/bundle/vim-airline
+let g:airline#extensions#tabline#enabled = 1
+
+set runtimepath^=~/.vim/bundle/nerdtree
+nnoremap <C-b> :NERDTreeToggle<CR>
