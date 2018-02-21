@@ -10,5 +10,6 @@ do
 	fi
 	echo $F
 	diff ~/$F $F
+    cp ~/$F $F
 done
 
