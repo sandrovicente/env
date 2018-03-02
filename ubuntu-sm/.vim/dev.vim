@@ -1,3 +1,5 @@
+
+
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
@@ -9,3 +11,7 @@ nnoremap <space> za
 highlight BadWhitespace ctermbg=red guibg=darkred
 au BufRead,BufNewFile *.py,*.pyw,*.cpp,*.cc,*.hpp,*.c,*.h match BadWhitespace /\s\+$/ 
 
+"prompt delete buffer
+:nnoremap <leader>lsd :ls<cr>:bd<space>
+
+:nnoremap P "+p
