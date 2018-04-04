@@ -16,6 +16,8 @@ set incsearch
 set mouse=a
 set hidden
 
+set go-=T
+
 source ~/.vim/dev.vim
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
