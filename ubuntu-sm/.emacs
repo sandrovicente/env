@@ -125,5 +125,13 @@
     (define-key ido-completion-map (kbd "C-p") 'ido-prev-match))
 (add-hook 'ido-setup-hook 'ido-define-keys)
 
+(setq python-shift-indent 4)
+(global-set-key (kbd "C->") 'python-indent-shift-right)
+(global-set-key (kbd "C-<") 'python-indent-shift-left)
+
+(add-hook 'python-mode-hook
+          '(lambda () (eldoc-mode 1)
+             ) t)
+
 (require 'ido)
 (ido-mode t)
