@@ -3,8 +3,9 @@
     "extensions.ignoreRecommendations": true,
     //"editor.fontFamily": "'Courier New', monospace",
     //"editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontFamily": "'Consolas', 'monospace'",
-     "editor.fontSize": 11,
+    //"editor.fontFamily": "'Consolas', 'monospace'",
+    "editor.fontFamily": "'Monaco', monospace",
+    "editor.fontSize": 12,
     "editor.wordWrap": "on",
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
     "window.zoomLevel": 0,
@@ -15,5 +16,6 @@
         "**/*.pyc": true,
         "build": true
     },
+    "workbench.activityBar.visible": false,
     //"python.pythonPath": "/home/sandroav/workspace/s/hanson/crane/.ENV/bin/python2.7",
  }
