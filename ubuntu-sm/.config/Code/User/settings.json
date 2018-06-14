@@ -17,5 +17,6 @@
         "build": true
     },
     "workbench.activityBar.visible": false,
+    "workbench.sideBar.location": "left",
     //"python.pythonPath": "/home/sandroav/workspace/s/hanson/crane/.ENV/bin/python2.7",
  }

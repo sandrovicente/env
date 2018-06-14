@@ -10,16 +10,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
- '(ansi-color-names-vector
-   ["black" "#d55e00" "#009e73" "#f8ec59" "#0072b2" "#cc79a7" "#56b4e9" "white"])
  '(case-fold-search nil)
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
- '(custom-enabled-themes (quote (wheatgrass)))
  '(font-use-system-font t)
- '(package-selected-packages (quote (ido-better-flex use-package magit)))
+ '(package-selected-packages
+   (quote
+    (back-button helm helm-ebdb ido-better-flex use-package magit)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(tool-bar-mode nil))
@@ -135,6 +132,7 @@
 
 (require 'ido)
 (ido-mode t)
+(setenv "PAGER" "cat")
 
 ;; directory load
 (defun load-directory (dir)
