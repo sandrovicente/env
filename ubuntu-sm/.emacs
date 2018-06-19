@@ -16,7 +16,7 @@
  '(font-use-system-font t)
  '(package-selected-packages
    (quote
-    (back-button helm helm-ebdb ido-better-flex use-package magit)))
+    (helm-projectile projectile helm helm-ebdb ido-better-flex use-package magit)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(tool-bar-mode nil))
@@ -142,3 +142,10 @@
 (mapc load-it (directory-files dir nil "\\.el$"))))
 
 (load-directory "~/.emacs.d/my")
+
+(global-set-key (kbd "C-M-<left>") 'backward-sexp)
+(global-set-key (kbd "C-M-<right>") 'forward-sexp)
+(global-set-key (kbd "C-M-<up>") 'backward-list)
+(global-set-key (kbd "C-M-<down>") 'forward-list)
+
+(global-set-key (kbd "C-|") 'shell-command-on-region)
