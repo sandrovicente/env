@@ -16,7 +16,7 @@
  '(font-use-system-font t)
  '(package-selected-packages
    (quote
-    (helm-projectile projectile helm helm-ebdb ido-better-flex use-package magit)))
+    (rust-mode helm-projectile projectile helm helm-ebdb ido-better-flex use-package magit)))
  '(show-paren-mode t)
  '(tab-width 4)
  '(tool-bar-mode nil))
