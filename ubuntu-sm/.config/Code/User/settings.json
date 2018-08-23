@@ -3,8 +3,8 @@
     "extensions.ignoreRecommendations": true,
     //"editor.fontFamily": "'Courier New', monospace",
     //"editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    //"editor.fontFamily": "'Consolas', 'monospace'",
-    "editor.fontFamily": "'Monaco', monospace",
+    "editor.fontFamily": "'Hack', 'monospace'",
+    //"editor.fontFamily": "'Monaco', monospace",
     "editor.fontSize": 12,
     "editor.wordWrap": "on",
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
@@ -19,5 +19,12 @@
     "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
     "editor.renderWhitespace": "all",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.colorTheme": "Monokai",
+    "window.menuBarVisibility": "toggle",
     //"python.pythonPath": "/home/sandroav/workspace/s/hanson/crane/.ENV/bin/python2.7",
+    "files.associations": {"*.pyx": "python", "*.pxd": "python"},
+
  }
