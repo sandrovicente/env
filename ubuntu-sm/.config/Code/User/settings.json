@@ -22,7 +22,7 @@
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Visual Studio Dark",
     "window.menuBarVisibility": "toggle",
     //"python.pythonPath": "/home/sandroav/workspace/s/hanson/crane/.ENV/bin/python2.7",
     "files.associations": {"*.pyx": "python", "*.pxd": "python"},
