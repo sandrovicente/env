@@ -6,7 +6,7 @@ set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set si 
 set shiftwidth=4
 "set statusline+=%F
-colorscheme industry 
+colorscheme desert 
 set autoread
 set autoindent
 set guifont=Monospace\ 9
@@ -36,3 +36,6 @@ nnoremap <leader>r :NERDTreeFind<cr>
 
 set runtimepath^=~/.vim/bundle/vim-fugitive
 nnoremap K :Ggrep -w <cword> <CR><CR>:cw<CR>
+
+set runtimepath^=~/.vim/bundle/rust.vim
+
