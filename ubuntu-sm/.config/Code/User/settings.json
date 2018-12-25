@@ -27,8 +27,11 @@
     //"python.pythonPath": "/home/sandroav/workspace/s/hanson/crane/.ENV/bin/python2.7",
     "files.associations": {
         "*.pyx": "python",
-        "*.pxd": "python"
+        "*.pxd": "python",
+        "*.toml": "ini"
     },
     "ai.homepage.openOnStartup": false,
+    "breadcrumbs.enabled": true,
+    "debug.allowBreakpointsEverywhere": true,
 
  }
