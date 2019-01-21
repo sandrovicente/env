@@ -39,3 +39,4 @@ nnoremap K :Ggrep -w <cword> <CR><CR>:cw<CR>
 
 set runtimepath^=~/.vim/bundle/rust.vim
 
+set autochdir
