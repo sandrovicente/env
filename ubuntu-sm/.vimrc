@@ -6,7 +6,7 @@ set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set si 
 set shiftwidth=4
 "set statusline+=%F
-colorscheme desert 
+colorscheme industry "desert 
 set autoread
 set autoindent
 set guifont=Monospace\ 9
