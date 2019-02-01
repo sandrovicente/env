@@ -22,7 +22,6 @@
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
-    "workbench.colorTheme": "Monokai",
     "window.menuBarVisibility": "toggle",
     //"python.pythonPath": "/home/sandroav/workspace/s/hanson/crane/.ENV/bin/python2.7",
     "files.associations": {
@@ -33,5 +32,6 @@
     "ai.homepage.openOnStartup": false,
     "breadcrumbs.enabled": true,
     "debug.allowBreakpointsEverywhere": true,
+    "workbench.colorTheme": "Monokai",
 
  }
