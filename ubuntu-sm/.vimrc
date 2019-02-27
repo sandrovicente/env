@@ -24,7 +24,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_use_caching = 0
 let g:ctrlp_clear_cache_on_exit = 1
 
-nnoremap <C-@> :CtrlPBuffer<CR>
+nnoremap <C-B> :CtrlPBuffer<CR>
 "nnoremap <Leader>vv :vimgrep <cword> ./**/* <CR>:cw<CR>
 
 set runtimepath^=~/.vim/bundle/vim-airline
@@ -39,6 +39,8 @@ nnoremap K :Ggrep -w <cword> <CR><CR>:cw<CR>
 
 set runtimepath^=~/.vim/bundle/rust.vim
 
+set runtimepath^=~/.vim/bundle/haskell-vim
+
 set autochdir
 
-set runtimepath^=/.vim/bundle/typescript-vim
+set runtimepath^=~/.vim/bundle/typescript-vim

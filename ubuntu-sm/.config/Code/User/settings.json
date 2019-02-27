@@ -32,6 +32,7 @@
     "ai.homepage.openOnStartup": false,
     "breadcrumbs.enabled": true,
     "debug.allowBreakpointsEverywhere": true,
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.iconTheme": "Monokai Pro Icons",
 
  }
