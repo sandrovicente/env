@@ -9,7 +9,7 @@ set autoindent
 set incsearch
 set cindent
 set vb t_vb=
-colorscheme desert 
+colorscheme ron 
 set statusline+=%F
 set autoread
 set laststatus=2
@@ -18,7 +18,6 @@ set mouse=a
 set hidden
 set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 nnoremap K :vimgrep <cword> /**/*
-nnoremap P "*p
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 nnoremap <C-B> :CtrlPBuffer<CR>
@@ -27,3 +26,15 @@ let g:ctrlp_user_command = 'find %s | grep -v -P "/\.\w"'
 
 set runtimepath^=~/.vim/bundle/nerdtree
 nnoremap <C-E> :NERDTreeToggle<CR>
+
+source ~/.vim/syntax/cabal.vim
+source ~/.vim/syntax/haskell.vim
+"set runtimepath^=~/.vim/bundle/haskellmode-vim
+autocmd BufNewFile,BufRead *.hs set syntax=haskell
+
+set runtimepath^=~/.vim/bundle/rust.vim
+autocmd BufNewFile,BufRead *.rs set syntax=rust
+
+set runtimepath^=~/.vim/bundle/vim-fugitive
+
+source ~/.vim/dev.vim

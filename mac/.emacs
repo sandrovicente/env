@@ -16,7 +16,7 @@
  '(custom-enabled-themes (quote (tango-dark)))
  '(package-selected-packages
    (quote
-    (helm-projectile projectile use-package ido-better-flex helm magit rust-mode)))
+    (haskell-mode helm-projectile projectile use-package ido-better-flex helm magit rust-mode)))
  '(show-paren-mode t)
  '(tab-width 4))
 (custom-set-faces
@@ -105,7 +105,7 @@ load-path))
 (require 'ido)
 (ido-mode t)
 
-(add-hook 'mouse-leave-buffer-hook 'stop-using-minibuffer)
+;(add-hook 'mouse-leave-buffer-hook 'stop-using-minibuffer)
 
 
 (global-set-key (kbd "C-x <up>") 'windmove-up)
@@ -139,3 +139,7 @@ load-path))
 (global-set-key (kbd "C-M-<right>") 'forward-sexp)
 (global-set-key (kbd "C-M-<up>") 'backward-list)
 (global-set-key (kbd "C-M-<down>") 'forward-list)
+
+(global-set-key (kbd "s-3") (lambda () (interactive) (insert 163)))
+(global-set-key (kbd "s-2") (lambda () (interactive) (insert #x20AC)))
+

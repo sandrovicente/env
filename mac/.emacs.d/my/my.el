@@ -32,6 +32,7 @@ X back-button        0.6.6         installed             Visual navigation throu
 (global-set-key (kbd "C-s-f") 'helm-find-files)
 (global-set-key (kbd "C-s-r") 'helm-recentf)
 (global-set-key (kbd "C-s-b") 'helm-buffers-list)
+(global-set-key (kbd "C-M-g") 'helm-grep-do-git-grep)
 
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
