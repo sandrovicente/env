@@ -14,6 +14,6 @@ au BufRead,BufNewFile *.py,*.pyw,*.cpp,*.cc,*.hpp,*.c,*.h match BadWhitespace /\
 "prompt delete buffer
 :nnoremap <leader>lsd :ls<cr>:bd<space>
 
-:nnoremap <leader>y "+y
+:vnoremap <leader>y "+y
 :nnoremap <leader>p "+p
 :nnoremap <leader>P "+P
