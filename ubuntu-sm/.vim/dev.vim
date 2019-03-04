@@ -17,3 +17,7 @@ au BufRead,BufNewFile *.py,*.pyw,*.cpp,*.cc,*.hpp,*.c,*.h match BadWhitespace /\
 :vnoremap <leader>y "+y
 :nnoremap <leader>p "+p
 :nnoremap <leader>P "+P
+
+:nnoremap <leader>r yaw:s/\<<C-R>"\>//gc<left><left><left>
+:vnoremap <C-R> "hy:s/<C-R>h//gc<left><left><left>
+
