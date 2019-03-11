@@ -32,7 +32,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 set runtimepath^=~/.vim/bundle/nerdtree
 nnoremap <C-e> :NERDTreeToggle<CR>
-nnoremap <leader>r :NERDTreeFind<cr>
+nnoremap <leader>f :NERDTreeFind<cr>
 
 set runtimepath^=~/.vim/bundle/vim-fugitive
 nnoremap K :Ggrep -w <cword> <CR><CR>:cw<CR>

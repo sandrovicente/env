@@ -21,8 +21,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-export PATH="$HOME/.cargo/bin:$PATH"
-
 REMOTE="10.100.1.239"
 echo $SSH_CONNECTION | grep $REMOTE && export DISPLAY=$REMOTE:0.0
 echo "Display: $DISPLAY"
+
+export PATH="$HOME/.cargo/bin:$PATH"

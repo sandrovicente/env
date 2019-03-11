@@ -32,7 +32,8 @@
     "ai.homepage.openOnStartup": false,
     "breadcrumbs.enabled": true,
     "debug.allowBreakpointsEverywhere": true,
-    "workbench.colorTheme": "Default High Contrast",
+    "workbench.colorTheme": "United Ubuntu",
     "workbench.iconTheme": "Monokai Pro Icons",
 
+    "rust-client.channel": "nightly"
  }
