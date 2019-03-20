@@ -32,7 +32,7 @@
     "ai.homepage.openOnStartup": false,
     "breadcrumbs.enabled": true,
     "debug.allowBreakpointsEverywhere": true,
-    "workbench.colorTheme": "United Ubuntu",
+    "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "Monokai Pro Icons",
 
     "rust-client.channel": "nightly"
