@@ -1,5 +1,6 @@
 ! Use a nice truetype font and size by default... 
-xterm*faceName: DejaVu Sans Mono Book
+#xterm*faceName: DejaVu Sans Mono Book
+xterm*faceName: Lucida Console
 xterm*faceSize: 9 
 
 ! Every shell is a login shell by default (for inclusion of all necessary environment variables)
@@ -12,7 +13,8 @@ xterm*savelines: 16384
 xterm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
 *background: #002b36
-*foreground: #f5fffa
+#*foreground: #f5fffa
+*foreground: #10fffa
 !!*fading: 40
 *fadeColor: #002b36
 *cursorColor: #93a1a1
