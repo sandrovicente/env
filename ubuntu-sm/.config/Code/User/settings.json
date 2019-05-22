@@ -9,7 +9,7 @@
     "editor.wordWrap": "on",
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
     "window.zoomLevel": 0,
-    "terminal.integrated.fontSize": 11,
+    "terminal.integrated.fontSize": 12,
     "editor.minimap.enabled": false,
     "files.exclude": {
         "**/.*": true,
@@ -35,5 +35,8 @@
     "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "Monokai Pro Icons",
 
-    "rust-client.channel": "nightly"
+    "rust-client.channel": "nightly",
+    "python.linting.pylintArgs": [
+        "--disable=no-member"
+    ],
  }
