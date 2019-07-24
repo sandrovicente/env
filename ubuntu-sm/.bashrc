@@ -138,3 +138,9 @@ export PATH=$PATH:/home/sandroav/.local/bin
 xemacs() { emacs "$@" 2>/dev/null & }
 
 source <(kubectl completion bash)
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export PATH=$PATH:$HOME/bin
+
+source ~/init.sh
+
