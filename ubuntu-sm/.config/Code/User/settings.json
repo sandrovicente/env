@@ -32,11 +32,13 @@
     "ai.homepage.openOnStartup": false,
     "breadcrumbs.enabled": true,
     "debug.allowBreakpointsEverywhere": true,
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Default High Contrast",
     "workbench.iconTheme": "Monokai Pro Icons",
 
     "rust-client.channel": "nightly",
+    //"rust-client.channel": "nightly-2019-06-02",
     "python.linting.pylintArgs": [
         "--disable=no-member"
     ],
+    "search.showLineNumbers": true,
  }

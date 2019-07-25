@@ -17,5 +17,21 @@
     {
         "key": "ctrl+b",
         "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+k ctrl+[Backslash]",
+        "command": "editor.action.transformToUppercase"
+    },
+    {
+        "key": "ctrl+l ctrl+shift+[Backslash]",
+        "command": "editor.action.transformToLowercase"
+    },
+    {
+        "key": "ctrl+f11",
+        "command": "editor.action.goToTypeDefinition"
+    },
+    {
+        "key": "ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode"
     }
 ]

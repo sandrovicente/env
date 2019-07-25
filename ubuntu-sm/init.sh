@@ -10,6 +10,12 @@ v() {
 e() {
     F=`fzf`
     $EDIT $F
-    echo $VIEW $F
+    echo $EDIT $F
+}
+#export RUSTC_WRAPPER=sccache
+
+kube() {
+    source <(kubectl completion bash)
 }
 
+alias kubec="KUBECONFIG=${HOME}/.kube/kconfig kubectl"
