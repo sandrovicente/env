@@ -41,4 +41,7 @@
         "--disable=no-member"
     ],
     "search.showLineNumbers": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
  }
