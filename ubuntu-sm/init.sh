@@ -1,4 +1,7 @@
+export W=$HOME/workspace
 export S=$HOME/workspace/s
+export W2=/hdd/work
+export S2=$W2/s
 
 #export REPO_S=$S/smarkets
 #alias k8s='source $REPO_S/tools/dev/setup/activate.sh'
@@ -50,3 +53,8 @@ k() {
 
 
 export RUST_CODE_PATH=$S/hanson/rust
+
+ks() {
+    KUBECONFIG=${HOME}/.kube/staging-config eval $@
+}
+

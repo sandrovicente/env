@@ -41,6 +41,7 @@ set runtimepath^=~/.vim/bundle/rust.vim
 
 set runtimepath^=~/.vim/bundle/haskell-vim
 
-set autochdir
+"set autochdir
 
 set runtimepath^=~/.vim/bundle/typescript-vim
+set noswapfile

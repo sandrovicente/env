@@ -1,3 +1,2 @@
-"colorscheme desert
-colorscheme darkblue
+colorscheme desert
 set go-=m

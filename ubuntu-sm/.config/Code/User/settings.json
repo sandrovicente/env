@@ -14,7 +14,11 @@
     "files.exclude": {
         "**/.*": true,
         "**/*.pyc": true,
-        "build": true
+        "build": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "workbench.activityBar.visible": false,
     "workbench.sideBar.location": "left",
@@ -32,7 +36,7 @@
     "ai.homepage.openOnStartup": false,
     "breadcrumbs.enabled": true,
     "debug.allowBreakpointsEverywhere": true,
-    "workbench.colorTheme": "Default High Contrast",
+    "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "Monokai Pro Icons",
 
     "rust-client.channel": "nightly",
