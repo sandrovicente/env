@@ -33,5 +33,9 @@
     {
         "key": "ctrl+m",
         "command": "-editor.action.toggleTabFocusMode"
+    },
+    {
+        "key": "ctrl+alt+0",
+        "command": "workbench.action.editorLayoutSingle"
     }
 ]
