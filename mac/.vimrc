@@ -21,7 +21,6 @@ nnoremap K :vimgrep <cword> /**/*
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 nnoremap <C-B> :CtrlPBuffer<CR>
-let g:ctrlp_user_command = 'find %s | grep -v -P "/\.\w"'
 "nnoremap <Leader>vv :vimgrep <cword> ./**/* <CR>:cw<CR>
 
 set runtimepath^=~/.vim/bundle/nerdtree
@@ -38,3 +37,4 @@ autocmd BufNewFile,BufRead *.rs set syntax=rust
 set runtimepath^=~/.vim/bundle/vim-fugitive
 
 source ~/.vim/dev.vim
+set noswapfile
