@@ -45,3 +45,4 @@ set runtimepath^=~/.vim/bundle/haskell-vim
 
 set runtimepath^=~/.vim/bundle/typescript-vim
 set noswapfile
+set backspace=indent,eol,start
