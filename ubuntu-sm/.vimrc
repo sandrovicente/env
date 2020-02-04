@@ -23,6 +23,7 @@ source ~/.vim/dev.vim
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 "let g:ctrlp_use_caching = 0
 "let g:ctrlp_clear_cache_on_exit = 1
+let g:ctrlp_custom_ignore = 'target\|__pycache__'
 
 nnoremap <C-B> :CtrlPBuffer<CR>
 "nnoremap <Leader>vv :vimgrep <cword> ./**/* <CR>:cw<CR>
