@@ -3,7 +3,7 @@
     "extensions.ignoreRecommendations": true,
     //"editor.fontFamily": "'Courier New', monospace",
     //"editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontFamily": "'Lucida Console'",
+    "editor.fontFamily": "'Hack'",
     //"editor.fontFamily": "'Monaco', monospace",
     "editor.fontSize": 12,
     "editor.wordWrap": "on",
@@ -49,4 +49,5 @@
     "python.jediEnabled": false,
     "files.autoSave": "afterDelay",
     "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.integrated.fontFamily": "monospace",
  }
