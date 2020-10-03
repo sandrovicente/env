@@ -11,14 +11,16 @@ export PATH=$PATH:$REPO_H/crane
 
 #alias hshell='docker run --rm -it -v $REPO_H:/var/lib/hanson -v $HOME/workspace:/var/workspace -v $REPO_H/local/hanson_cfg:/etc/hanson_cfg -v $REPO_H/local/hanson_archive:/var/log/hanson_archive -v $REPO_H/local/hanson_state:/var/hanson_state hanson bash'
 
-#export HANSON_IMAGE=$(docker images --format "{{.ID}}"  | head -1 )
-export HANSON_IMAGE=hanson
+export HANSON_IMAGE=hanson-code
 
 #alias hshell='docker run --rm -it -v $HOME/workspace:/var/workspace -v /hdd:/var/lib/hdd -v $S/hanson/local/work:/var/lib/work -v $S/hanson/local/hanson_cfg:/etc/hanson_cfg:ro -v $S/hanson/local/hanson_archive:/var/log/hanson -v $S/hanson/local/hanson_state:/var/hanson_state -v $S/hanson:/var/lib/hanson -v  $HOME/.vimrc:/root/.vimrc:ro -v $HOME/.vim:/root/.vim:ro -e TERM=xterm-256color -e REAL_LOCALHOST=10.100.1.82 -e DRY_REST_PORT=20004 -e HANSON_ENV=dev -e ENABLE_CONSOLE_LOGGING=True -e LINES=$(tput lines) -e REST_PORT=20002 -e COLUMNS=$(tput cols) -e SHARD_KEY=shard_1 --log-driver=syslog --log-opt syslog-address=udp://localhost:514 --log-opt syslog-format=rfc5424micro --log-opt tag={{.Name}}/dev -ti $HANSON_IMAGE /bin/bash'
 
 alias hshell='docker run --rm -it -v $HOME/workspace:/var/workspace -v /hdd:/var/lib/hdd -v $S/hanson/local/work:/var/lib/work -v $S/env/hanson_cfg:/etc/hanson_cfg:ro -v $S/hanson/local/hanson_archive:/var/log/hanson -v $S/hanson/local/hanson_state:/var/hanson_state -v $S/hanson:/var/lib/hanson -v  $HOME/.vimrc:/root/.vimrc:ro -v $HOME/.vim:/root/.vim:ro -e TERM=xterm-256color -e REAL_LOCALHOST=10.100.1.82 -e DRY_REST_PORT=20004 -e HANSON_ENV=dev -e ENABLE_CONSOLE_LOGGING=True -e LINES=$(tput lines) -e REST_PORT=20002 -e COLUMNS=$(tput cols) -e SHARD_KEY=shard_1 --log-driver=syslog --log-opt syslog-address=udp://localhost:514 --log-opt syslog-format=rfc5424micro --log-opt tag={{.Name}}/dev -ti $HANSON_IMAGE /bin/bash'
 
 alias hshell2='docker run --rm -it -v $HOME/workspace:/var/workspace -v /hdd:/var/lib/hdd -v $S/hanson/local/work:/var/lib/work -v $S/env/hanson_cfg2:/etc/hanson_cfg:ro -v $S/hanson/local/hanson_archive:/var/log/hanson -v $S/hanson/local/hanson_state:/var/hanson_state -v $S/hanson:/var/lib/hanson -v  $HOME/.vimrc:/root/.vimrc:ro -v $HOME/.vim:/root/.vim:ro -e TERM=xterm-256color -e REAL_LOCALHOST=10.100.1.82 -e DRY_REST_PORT=20004 -e HANSON_ENV=dev -e ENABLE_CONSOLE_LOGGING=True -e LINES=$(tput lines) -e REST_PORT=20002 -e COLUMNS=$(tput cols) -e SHARD_KEY=shard_1 --log-driver=syslog --log-opt syslog-address=udp://localhost:514 --log-opt syslog-format=rfc5424micro --log-opt tag={{.Name}}/dev -ti $HANSON_IMAGE /bin/bash'
+
+
+alias mockshell='docker run --rm -it -v $HOME/workspace:/var/workspace -v /hdd:/var/lib/hdd -v $S/hanson/mockfosters:/var/lib/mockfosters -v $S/hanson/local/work:/var/lib/work -v $S/env/hanson_cfg:/etc/hanson_cfg:ro -v $S/hanson/local/hanson_archive:/var/log/hanson -v $S/hanson/local/hanson_state:/var/hanson_state -v $S/hanson:/var/lib/hanson -v  $HOME/.vimrc:/root/.vimrc:ro -v $HOME/.vim:/root/.vim:ro -e TERM=xterm-256color -e REAL_LOCALHOST=10.100.1.82 -e DRY_REST_PORT=20004 -e HANSON_ENV=dev -e ENABLE_CONSOLE_LOGGING=True -e LINES=$(tput lines) -e REST_PORT=20002 -e COLUMNS=$(tput cols) -e SHARD_KEY=shard_1 --log-driver=syslog --log-opt syslog-address=udp://localhost:514 --log-opt syslog-format=rfc5424micro --log-opt tag={{.Name}}/dev -ti $HANSON_IMAGE /bin/bash'
 
 export PYTHONPATH=$S/smarkets/tools/dev
 export PATH=$PATH:/home/sandroav/.local/bin
@@ -58,6 +60,9 @@ k() {
 
 
 export RUST_CODE_PATH=$S/hanson/rust
+
+export GO_HOME=/usr/lib/go-1.15
+export PATH=$PATH:$GO_HOME/bin
 
 ks() {
     KUBECONFIG=${HOME}/.kube/staging-config eval $@

@@ -13,15 +13,16 @@
     "editor.minimap.enabled": false,
     "files.exclude": {
         "**/.*": true,
-        "**/*.pyc": true,
-        "build": true,
         "**/.classpath": true,
+        "**/.factorypath": true,
         "**/.project": true,
         "**/.settings": true,
-        "**/.factorypath": true
+        "**/*.pyc": true,
+        "build": true,
+        "target/**": true
     },
     "workbench.activityBar.visible": false,
-    "workbench.sideBar.location": "left",
+    "workbench.sideBar.location": "right",
     "editor.renderWhitespace": "all",
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
@@ -50,4 +51,7 @@
     "files.autoSave": "afterDelay",
     "diffEditor.ignoreTrimWhitespace": false,
     "terminal.integrated.fontFamily": "monospace",
+    "workbench.statusBar.visible": true,
+    "python.languageServer": "Microsoft",
+    "python.defaultInterpreterPath": "/usr/bin/python",
  }

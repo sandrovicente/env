@@ -122,5 +122,8 @@ if ! shopt -oq posix; then
 fi
 
 ### my stuff ###
-source ~/init.sh
-
+if [[ -n $APP_NAME ]]; then
+    export PS1="\e[0;33;1m\D{%F %T} - \u@\h \[\033[32m\]\w\[\033[33m\]\n$\e[m "
+else
+    source ~/init.sh
+fi

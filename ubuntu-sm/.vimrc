@@ -47,3 +47,5 @@ set runtimepath^=~/.vim/bundle/haskell-vim
 set runtimepath^=~/.vim/bundle/typescript-vim
 set noswapfile
 set backspace=indent,eol,start
+
+set runtimepath^=~/.vim/bundle/awesome-vim-colorschemes
