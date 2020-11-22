@@ -54,4 +54,6 @@
     "workbench.statusBar.visible": true,
     "python.languageServer": "Microsoft",
     "python.defaultInterpreterPath": "/usr/bin/python",
+    "rust-analyzer.inlayHints.typeHints": false,
+    "workbench.colorTheme": "Visual Studio Dark",
  }

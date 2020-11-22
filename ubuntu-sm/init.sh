@@ -58,7 +58,6 @@ k() {
     KUBECONFIG=${HOME}/.kube/kconfig eval $@
 }
 
-
 export RUST_CODE_PATH=$S/hanson/rust
 
 export GO_HOME=/usr/lib/go-1.15
@@ -69,3 +68,4 @@ ks() {
 }
 
 shopt -s direxpand
+alias nvim=$W2/tools/nvim.appimage
