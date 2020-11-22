@@ -9,13 +9,14 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Shougo/deoplete-lsp'
 Plug 'ervandew/supertab'
 Plug 'Chiel92/vim-autoformat'
-
 Plug 'morhetz/gruvbox'
 Plug 'ncm2/float-preview.nvim'
 Plug 'tpope/vim-vinegar'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'cespare/vim-toml'
+
+Plug 'neomake/neomake'
 call plug#end()
 
 " Basic configuration {{{
@@ -57,11 +58,11 @@ set wrapmargin=0
 
 " Theming {{{
 
-set termguicolors
+"set termguicolors
 set background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
 set guioptions=
-"highlight Normal guibg=None
+highlight Normal guibg=None
 
 " }}}
 
@@ -76,44 +77,6 @@ let g:netrw_list_hide = netrw_gitignore#Hide() . ',' . &wildignore
 " General key bindings {{{
 
 nnoremap <leader><space> :nohl<cr>
-"nnoremap ; :
-"
-"vnoremap < <gv
-"vnoremap > >gv
-"
-"nnoremap <C-h> <C-w>h
-"nnoremap <C-j> <C-w>j
-"nnoremap <C-k> <C-w>k
-"nnoremap <C-l> <C-w>l
-"
-"nnoremap <up> <nop>
-"nnoremap <down> <nop>
-"nnoremap <left> <nop>
-"nnoremap <right> <nop>
-"
-"vnoremap <up> <nop>
-"vnoremap <down> <nop>
-"vnoremap <left> <nop>
-"vnoremap <right> <nop>
-"
-"nnoremap <C-n> :tabn<cr>
-"nnoremap <C-p> :tabp<cr>
-"nnoremap <tab> %
-"nnoremap Z ZZ
-"nnoremap <leader>f :Files<cr>
-"
-"inoremap jj <esc>
-
-" }}}
-
-" LSP {{{
-
-"autocmd filetype rust nnoremap <buffer> <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<cr>
-"autocmd filetype rust nnoremap <buffer> <silent> K     <cmd>lua vim.lsp.buf.hover()<cr>
-"autocmd filetype rust nnoremap <buffer> <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<cr>
-"autocmd filetype rust nnoremap <buffer> <silent> gr    <cmd>lua vim.lsp.buf.references()<cr>
-"autocmd filetype rust nnoremap <buffer> <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<cr>
-"autocmd filetype rust setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 lua << EOF
 local lspconfig = require'lspconfig'
@@ -138,3 +101,7 @@ autocmd User FloatPreviewWinOpen call DisableExtras()
 
 let g:float_preview#docked = 1
 set completeopt=menu
+
+" python
+let g:neomake_python_enabled_makers = ['pylint']
+call neomake#configure#automake('nrwi', 500)
