@@ -25,6 +25,7 @@ nnoremap <C-B> :CtrlPBuffer<CR>
 
 set runtimepath^=~/.vim/bundle/nerdtree
 nnoremap <C-E> :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<cr>
 
 source ~/.vim/syntax/cabal.vim
 source ~/.vim/syntax/haskell.vim
