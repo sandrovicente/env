@@ -17,8 +17,8 @@ rem @doskey idle=start /B python.exe %PYTHON3_HOME%\Lib\idlelib\idle.pyw $*
 @doskey xemacs=%EMACS_HOME%\bin\runemacs.exe $*
 
 rem BOOST for MSVC
-@SET BOOST_HOME=C:\tools\boost_1_62_0
-@SET BOOST_LIB64=%BOOST_HOME%\lib64-msvc-14.0
+@SET BOOST_HOME=C:\tools\boost_1_73_0
+@SET BOOST_LIB64=%BOOST_HOME%\lib64-msvc-14.1
 @SET PATH=%PATH%;%BOOST_LIB64%
 
 @doskey npp="c:\Program Files\Notepad++\Notepad++.exe" $*
@@ -30,3 +30,15 @@ rem BOOST for MSVC
 
 @doskey gvim=c:\tools\vim\gvim $*
 @doskey svn=\cygwin64\bin\svn.exe $*
+
+@SET CAPNP_HOME=%W%\prjs\gh\capnproto
+@SET CAPNP_BIN=%CAPNP_HOME%\build\c++\src\capnp\Debug
+@SET PATH=%PATH%;%CAPNP_BIN%
+
+rem NVIM STUFF
+@doskey nvim=c:\tools\Neovim\bin\nvim.exe $*
+@doskey gnvim=c:\tools\Neovim\bin\nvim-qt.exe $*
+rem @SET PATH=%PATH%;C:\tools\Neovim\bin
+
+rem kotlin stuff
+PATH=%PATH%;C:\tools\kotlin-native-windows-1.4.20\bin
