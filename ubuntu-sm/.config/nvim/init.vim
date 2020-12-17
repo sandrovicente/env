@@ -16,6 +16,8 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'cespare/vim-toml'
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'neomake/neomake'
 call plug#end()
 
@@ -24,43 +26,9 @@ call plug#end()
 " Note: Neovim is always "nocompatible".
 
 filetype plugin indent on
-syntax on
-
-set nobackup
-set nowritebackup
-set noswapfile
-set hidden
-set updatetime=300
-set shortmess+=c
-set signcolumn=yes
-set novb
-"set relativenumber
-set hlsearch
-set incsearch
-set smartcase
-set wildmode=full
-set wildignore+=*/.git/*
-set autoindent
-set backspace=indent,eol,start
-set expandtab
-set foldlevelstart=20
-set foldmethod=syntax
-set linebreak
-set mouse=a
-set nowrap
-set scrolloff=5
-set shiftwidth=2 tabstop=2 softtabstop=2
-set splitbelow splitright
-set timeoutlen=300
-set wrapmargin=0
-
-" }}}
-
-" Theming {{{
 
 "set termguicolors
 set background=dark
-"colorscheme gruvbox
 set guioptions=
 highlight Normal guibg=None
 
@@ -101,6 +69,23 @@ autocmd User FloatPreviewWinOpen call DisableExtras()
 
 let g:float_preview#docked = 1
 set completeopt=menu
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 
 " python
 let g:neomake_python_enabled_makers = ['pylint']

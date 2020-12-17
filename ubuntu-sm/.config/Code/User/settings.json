@@ -8,7 +8,7 @@
     "editor.fontSize": 12,
     "editor.wordWrap": "on",
     "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${appName}",
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "terminal.integrated.fontSize": 12,
     "editor.minimap.enabled": false,
     "files.exclude": {
@@ -55,5 +55,5 @@
     "python.languageServer": "Microsoft",
     "python.defaultInterpreterPath": "/usr/bin/python",
     "rust-analyzer.inlayHints.typeHints": false,
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "Visual Studio 2019 Dark",
  }
