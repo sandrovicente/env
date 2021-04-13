@@ -19,6 +19,8 @@ Plug 'cespare/vim-toml'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'neomake/neomake'
+
+Plug 'jdonaldson/vaxe'
 call plug#end()
 
 " Basic configuration {{{
