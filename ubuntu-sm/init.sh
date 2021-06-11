@@ -63,6 +63,8 @@ export PATH=$PATH:$HOME/go/bin
 
 export PATH=$PATH:$T/gradle-7.0.2/bin
 
+export EDITOR=nvim
+
 ### BOTTOM
 shopt -s direxpand
 source $HOME/.kf.sh

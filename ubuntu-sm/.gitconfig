@@ -1,0 +1,9 @@
+[grep]
+	lineNumber = true
+[user]
+	name = sandrov
+	email = sandrovicente@gmail.com
+[core]
+	editor = nvim
+[merge]
+	tool = kdiff3
