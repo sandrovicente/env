@@ -115,10 +115,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-source "$HOME/.cargo/env"
-
-echo "my changes"
-source "$HOME/init.sh"
-
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
+source $HOME/init.sh

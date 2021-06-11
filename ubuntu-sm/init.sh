@@ -20,7 +20,7 @@ export PATH=$PATH:/home/sandrov/.local/bin
 source <(kubectl completion bash)
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/local/bin
 
 export EDIT=nvim
 export VIEW=less
@@ -51,8 +51,7 @@ kube_bash() {
 #}
 
 # JDK
-export JAVA_HOME=$HOME/tools/jdk-11.0.10
-#export JAVA_HOME=$HOME/tools/jdk-15.0.1
+export JAVA_HOME=$HOME/.jdks/corretto-11.0.11
 export PATH=$PATH:$JAVA_HOME/bin
 
 export KOTLIN_HOME=$HOME/tools/kotlin-native-prebuilt-linux-1.4.21
@@ -62,7 +61,7 @@ export GO_HOME=$HOME/tools/go
 export PATH=$PATH:$GO_HOME/bin
 export PATH=$PATH:$HOME/go/bin
 
-export PATH=$PATH:$T/gradle/gradle-6.8.3/bin
+export PATH=$PATH:$T/gradle-7.0.2/bin
 
 ### BOTTOM
 shopt -s direxpand

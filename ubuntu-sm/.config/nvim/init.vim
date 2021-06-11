@@ -12,7 +12,7 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'morhetz/gruvbox'
 Plug 'ncm2/float-preview.nvim'
 Plug 'tpope/vim-vinegar'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'cespare/vim-toml'
 
@@ -21,6 +21,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neomake/neomake'
 
 Plug 'jdonaldson/vaxe'
+
+Plug 'udalov/kotlin-vim'
 call plug#end()
 
 " Basic configuration {{{

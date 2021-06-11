@@ -25,4 +25,5 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"
+if [ -e /home/sandrov/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sandrov/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
