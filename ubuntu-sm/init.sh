@@ -1,39 +1,31 @@
-export W=$HOME/workspace
-export S=$HOME/workspace/s
-export W2=/hdd/work
-export S2=$W2/s
+export W=$HOME/work
+export T=$HOME/tools
+export TMP=$HOME/tmp
 
 #export REPO_S=$S/smarkets
 #alias k8s='source $REPO_S/tools/dev/setup/activate.sh'
 
-export REPO_H=$S/hanson
-export PATH=$PATH:$REPO_H/crane
-
 #alias hshell='docker run --rm -it -v $REPO_H:/var/lib/hanson -v $HOME/workspace:/var/workspace -v $REPO_H/local/hanson_cfg:/etc/hanson_cfg -v $REPO_H/local/hanson_archive:/var/log/hanson_archive -v $REPO_H/local/hanson_state:/var/hanson_state hanson bash'
 
-export HANSON_IMAGE=hanson-code
+#export PYTHONPATH=$S/smarkets/tools/dev
 
-#alias hshell='docker run --rm -it -v $HOME/workspace:/var/workspace -v /hdd:/var/lib/hdd -v $S/hanson/local/work:/var/lib/work -v $S/hanson/local/hanson_cfg:/etc/hanson_cfg:ro -v $S/hanson/local/hanson_archive:/var/log/hanson -v $S/hanson/local/hanson_state:/var/hanson_state -v $S/hanson:/var/lib/hanson -v  $HOME/.vimrc:/root/.vimrc:ro -v $HOME/.vim:/root/.vim:ro -e TERM=xterm-256color -e REAL_LOCALHOST=10.100.1.82 -e DRY_REST_PORT=20004 -e HANSON_ENV=dev -e ENABLE_CONSOLE_LOGGING=True -e LINES=$(tput lines) -e REST_PORT=20002 -e COLUMNS=$(tput cols) -e SHARD_KEY=shard_1 --log-driver=syslog --log-opt syslog-address=udp://localhost:514 --log-opt syslog-format=rfc5424micro --log-opt tag={{.Name}}/dev -ti $HANSON_IMAGE /bin/bash'
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
-alias hshell='docker run --rm -it -v $HOME/workspace:/var/workspace -v /hdd:/var/lib/hdd -v $S/hanson/local/work:/var/lib/work -v $S/env/hanson_cfg:/etc/hanson_cfg:ro -v $S/hanson/local/hanson_archive:/var/log/hanson -v $S/hanson/local/hanson_state:/var/hanson_state -v $S/hanson:/var/lib/hanson -v  $HOME/.vimrc:/root/.vimrc:ro -v $HOME/.vim:/root/.vim:ro -e TERM=xterm-256color -e REAL_LOCALHOST=10.100.1.82 -e DRY_REST_PORT=20004 -e HANSON_ENV=dev -e ENABLE_CONSOLE_LOGGING=True -e LINES=$(tput lines) -e REST_PORT=20002 -e COLUMNS=$(tput cols) -e SHARD_KEY=shard_1 --log-driver=syslog --log-opt syslog-address=udp://localhost:514 --log-opt syslog-format=rfc5424micro --log-opt tag={{.Name}}/dev -ti $HANSON_IMAGE /bin/bash'
+export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \D{%FT%T}\n$ "
 
-alias hshell2='docker run --rm -it -v $HOME/workspace:/var/workspace -v /hdd:/var/lib/hdd -v $S/hanson/local/work:/var/lib/work -v $S/env/hanson_cfg2:/etc/hanson_cfg:ro -v $S/hanson/local/hanson_archive:/var/log/hanson -v $S/hanson/local/hanson_state:/var/hanson_state -v $S/hanson:/var/lib/hanson -v  $HOME/.vimrc:/root/.vimrc:ro -v $HOME/.vim:/root/.vim:ro -e TERM=xterm-256color -e REAL_LOCALHOST=10.100.1.82 -e DRY_REST_PORT=20004 -e HANSON_ENV=dev -e ENABLE_CONSOLE_LOGGING=True -e LINES=$(tput lines) -e REST_PORT=20002 -e COLUMNS=$(tput cols) -e SHARD_KEY=shard_1 --log-driver=syslog --log-opt syslog-address=udp://localhost:514 --log-opt syslog-format=rfc5424micro --log-opt tag={{.Name}}/dev -ti $HANSON_IMAGE /bin/bash'
-
-
-alias mockshell='docker run --rm -it -v $HOME/workspace:/var/workspace -v /hdd:/var/lib/hdd -v $S/hanson/mockfosters:/var/lib/mockfosters -v $S/hanson/local/work:/var/lib/work -v $S/env/hanson_cfg:/etc/hanson_cfg:ro -v $S/hanson/local/hanson_archive:/var/log/hanson -v $S/hanson/local/hanson_state:/var/hanson_state -v $S/hanson:/var/lib/hanson -v  $HOME/.vimrc:/root/.vimrc:ro -v $HOME/.vim:/root/.vim:ro -e TERM=xterm-256color -e REAL_LOCALHOST=10.100.1.82 -e DRY_REST_PORT=20004 -e HANSON_ENV=dev -e ENABLE_CONSOLE_LOGGING=True -e LINES=$(tput lines) -e REST_PORT=20002 -e COLUMNS=$(tput cols) -e SHARD_KEY=shard_1 --log-driver=syslog --log-opt syslog-address=udp://localhost:514 --log-opt syslog-format=rfc5424micro --log-opt tag={{.Name}}/dev -ti $HANSON_IMAGE /bin/bash'
-
-export PYTHONPATH=$S/smarkets/tools/dev
-export PATH=$PATH:/home/sandroav/.local/bin
-
-xemacs() { emacs "$@" 2>/dev/null & }
+export PATH=$PATH:/home/sandrov/.local/bin
 
 source <(kubectl completion bash)
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$HOME/local/bin
 
-export EDIT=vim
+export EDIT=nvim
 export VIEW=less
+
+gnvim () { nvim-qt "$@" 2>/dev/null & }
 
 v() {
     F=`fzf`
@@ -47,25 +39,32 @@ e() {
     echo $EDIT $F
 }
 #export RUSTC_WRAPPER=sccache
-
+#
 kube_bash() {
     source <(kubectl completion bash)
 }
 
-alias kubec="KUBECONFIG=${HOME}/.kube/kconfig kubectl"
+#alias kubec="KUBECONFIG=${HOME}/.kube/kconfig kubectl"
+#
+#k() {
+#    KUBECONFIG=${HOME}/.kube/kconfig eval $@
+#}
 
-k() {
-    KUBECONFIG=${HOME}/.kube/kconfig eval $@
-}
+# JDK
+export JAVA_HOME=$HOME/.jdks/corretto-11.0.11
+export PATH=$PATH:$JAVA_HOME/bin
 
-export RUST_CODE_PATH=$S/hanson/rust
+export KOTLIN_HOME=$HOME/tools/kotlin-native-prebuilt-linux-1.4.21
+export PATH=$PATH:$KOTLIN_HOME/bin
 
-export GO_HOME=/usr/lib/go-1.15
+export GO_HOME=$HOME/tools/go
 export PATH=$PATH:$GO_HOME/bin
+export PATH=$PATH:$HOME/go/bin
 
-ks() {
-    KUBECONFIG=${HOME}/.kube/staging-config eval $@
-}
+export PATH=$PATH:$T/gradle-7.0.2/bin
 
+export EDITOR=nvim
+
+### BOTTOM
 shopt -s direxpand
-alias nvim=$W2/tools/nvim.appimage
+source $HOME/.kf.sh

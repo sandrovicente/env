@@ -8,12 +8,6 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-function set_remote_environment() {
-    export DISPLAY=$REMOTE:0.0
-    #eval `ssh-agent -s`
-    #ssh-add ~/.ssh/*_rsa
-}
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
@@ -27,8 +21,9 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-#REMOTE="10.100.1.239"
-#echo $SSH_CONNECTION | grep $REMOTE && set_remote_environment
-#echo "Display: $DISPLAY"
-
-export PATH="$HOME/.cargo/bin:$PATH"
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+. "$HOME/.cargo/env"
+if [ -e /home/sandrov/.nix-profile/etc/profile.d/nix.sh ]; then . /home/sandrov/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
