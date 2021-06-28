@@ -9,7 +9,7 @@ set autoindent
 set incsearch
 set cindent
 set vb t_vb=
-colorscheme ron 
+colorscheme desert
 set statusline+=%F
 set autoread
 set laststatus=2

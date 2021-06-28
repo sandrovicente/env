@@ -20,7 +20,6 @@ export PATH=$PATH:$MAVEN_HOME/bin
 
 #export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
-export PATH="$HOME/.cargo/bin:$PATH"
 
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -34,3 +33,4 @@ export PATH
 
 function devenv() { /Applications/Visual\ Studio.app/Contents/MacOS/VisualStudio "$@" >/dev/null 2>&1 & }
 
+. "$HOME/.cargo/env"
