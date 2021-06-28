@@ -5,5 +5,9 @@
 	email = sandrovicente@gmail.com
 [core]
 	editor = nvim
+    repositoryformatversion=0
+    filemode=true
+    bare=false
+    logallrefupdates=true
 [merge]
 	tool = kdiff3

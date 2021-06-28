@@ -1,7 +1,7 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-    {"key": "ctrl+alt+[", "command": "workbench.action.navigateBack"},
-    {"key": "ctrl+alt+]", "command": "workbench.action.navigateForward"},
+    {"key": "alt+left", "command": "workbench.action.navigateBack"},
+    {"key": "alt+right", "command": "workbench.action.navigateForward"},
     {"key": "ctrl+w", "command": "workbench.action.closeActiveEditor" },
     {"key": "ctrl+shift+-", "command": "-workbench.action.navigateForward"},
     { "key": "ctrl+-", "command": "workbench.action.zoomOut" },
@@ -83,5 +83,15 @@
         "key": "ctrl+shift+[IntlBackslash]",
         "command": "-breadcrumbs.toggleToOn",
         "when": "!config.breadcrumbs.enabled"
+    },
+    {
+        "key": "alt+left",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+right",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus && terminalProcessSupported"
     }
 ]

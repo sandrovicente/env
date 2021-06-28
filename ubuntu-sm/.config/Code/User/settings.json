@@ -20,14 +20,13 @@
         "build": true,
         "target/**": true
     },
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "workbench.sideBar.location": "right",
     "editor.renderWhitespace": "all",
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
     },
     "window.menuBarVisibility": "toggle",
-    //"python.pythonPath": "/home/sandroav/workspace/s/hanson/crane/.ENV/bin/python2.7",
     "files.associations": {
         "*.pyx": "python",
         "*.pxd": "python",
@@ -38,8 +37,7 @@
     "debug.allowBreakpointsEverywhere": true,
     "workbench.iconTheme": "Monokai Pro Icons",
 
-    "rust-client.channel": "nightly",
-    //"rust-client.channel": "nightly-2019-06-02",
+    //"rust-client.channel": "nightly",
     "python.linting.pylintArgs": [
         "--disable=no-member"
     ],
@@ -55,5 +53,5 @@
     "python.defaultInterpreterPath": "/usr/bin/python",
     "rust-analyzer.inlayHints.typeHints": false,
     "workbench.colorTheme": "Monokai",
-    "window.zoomLevel": 1,
+    "window.zoomLevel": 1
  }

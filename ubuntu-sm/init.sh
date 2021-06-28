@@ -63,7 +63,8 @@ export PATH=$PATH:$HOME/go/bin
 
 export PATH=$PATH:$T/gradle-7.0.2/bin
 
-export EDITOR=nvim
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 
 ### BOTTOM
 shopt -s direxpand
